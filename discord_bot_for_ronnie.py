@@ -4,14 +4,14 @@ import time
 
 ##This is all POST Request stuff, I didn't do it, stolen from https://www.w3schools.com/PYTHON/ref_requests_post.asp
 def send_message(message):
-    url = '[YOUR_URL]' ##TODO Change to your URL
+    url = 'YOUR_URL' ##TODO Change to your URL
     myobj = {'content': message}
 
     x = requests.post(url, data = myobj)
 
 ##This takes an array of strings and picks a random one to assign as the message
 def pick_a_message(): 
-    options = [] ##TODO Add whatever options you would like
+    options = ['', '', ''] ##TODO Add whatever options you would like
     options_size = len(options)
     return options[random.randint(0, options_size)]
 
